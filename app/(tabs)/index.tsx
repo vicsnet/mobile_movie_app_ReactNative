@@ -8,11 +8,14 @@ import { useRouter } from "expo-router";
 import useFetch from "@/services/useFetch";
 import { fetchMovies } from "@/services/api";
 import MovieCard from "@/components/MovieCard";
+import { Client } from "react-native-appwrite";
 
 export default function Index() {
   const router = useRouter();
 
   const {data:movies, loading: moviesLoading, error: moviesError} = useFetch(() => fetchMovies({query:''}));
+
+    
 
   
 
